@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Autumn Auto Detailing</title>
+<style>
+    body { font-family: Arial, sans-serif; margin: 0; background-color: #111; color: #eee; }
+    header { background-color: #000; color: #fff; text-align: center; padding: 30px 10px; }
+    header h1 { margin: 0; font-size: 2.5rem; }
+    nav { text-align: center; background-color: #222; padding: 10px 0; }
+    nav a { color: #fff; margin: 0 15px; text-decoration: none; font-weight: bold; }
+    nav a:hover { text-decoration: underline; }
+
+    .section { max-width: 900px; margin: 40px auto; padding: 0 15px; }
+    h2 { text-align: center; color: #ff6600; margin-bottom: 20px; }
+
+    .about { text-align: center; line-height: 1.6; }
+
+    /* Slider */
+    .slider { position: relative; width: 100%; max-width: 800px; margin: 0 auto; overflow: hidden; border-radius: 10px; }
+    .slides { display: flex; width: 400%; transition: all 0.5s ease; }
+    .slides img { width: 100%; filter: grayscale(100%); }
+
+    .slider-buttons { text-align: center; margin-top: 10px; }
+    .slider-buttons button { padding: 10px 20px; margin: 0 5px; border: none; background-color: #ff6600; color: #fff; border-radius: 5px; cursor: pointer; }
+    .slider-buttons button:hover { background-color: #e65c00; }
+
+    .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 20px; }
+    .service { background-color: #222; padding: 20px; text-align: center; border-radius: 8px; }
+    .service h3 { margin: 0; color: #ff6600; }
+    .service p { font-size: 1.2rem; margin-top: 10px; }
+
+    .order-btn { display: block; margin: 30px auto; padding: 15px 35px; background-color: #ff6600; color: #fff; font-size: 1.2rem; text-decoration: none; border-radius: 6px; text-align: center; }
+    .order-btn:hover { background-color: #e65c00; }
+
+    .contact { text-align: center; margin-top: 40px; }
+    .contact p { margin: 5px 0; font-size: 1rem; }
+
+    .reviews { margin-top: 40px; }
+    .review { background-color: #222; padding: 20px; border-radius: 8px; margin-bottom: 15px; }
+    .review p { margin: 0; font-style: italic; }
+    .review span { display: block; margin-top: 10px; font-weight: bold; text-align: right; }
+
+    footer { text-align: center; padding: 15px 0; background-color: #000; color: #fff; margin-top: 40px; }
+
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Autumn Auto Detailing</h1>
+    <p>Keswick, Edmonton, Alberta</p>
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#about">About Us</a>
+    <a href="#gallery">Before & After</a>
+    <a href="#services">Services</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section class="section" id="home">
+    <h2>Welcome to Autumn Auto Detailing</h2>
+    <p style="text-align:center;">Professional car detailing services to keep your vehicle looking its best. From exterior washes to full premium details, we handle it all.</p>
+</section>
+
+<section class="section" id="about">
+    <h2>About Us</h2>
+    <div class="about">
+        <p>Autumn Auto Detailing is a family-owned business in Keswick, Edmonton, Alberta. We provide high-quality car detailing with care and attention to every vehicle. Our mission is to make your car look flawless inside and out.</p>
+    </div>
+</section>
+
+<section class="section" id="gallery">
+    <h2>Before & After</h2>
+    <div class="slider">
+        <div class="slides">
+            <img src="https://images.unsplash.com/photo-1563720220260-f80a11a5a911?auto=format&fit=crop&w=800&q=80" alt="Before Exterior">
+            <img src="https://images.unsplash.com/photo-1616628182598-23b345b9a99e?auto=format&fit=crop&w=800&q=80" alt="After Exterior">
+            <img src="https://images.unsplash.com/photo-1563720220260-f80a11a5a911?auto=format&fit=crop&w=800&q=80" alt="Before Interior">
+            <img src="https://images.unsplash.com/photo-1616628182598-23b345b9a99e?auto=format&fit=crop&w=800&q=80" alt="After Interior">
+        </div>
+    </div>
+    <div class="slider-buttons">
+        <button onclick="prevSlide()">Prev</button>
+        <button onclick="nextSlide()">Next</button>
+    </div>
+</section>
+
+<section class="section" id="services">
+    <h2>Our Services</h2>
+    <div class="services">
+        <div class="service">
+            <h3>Basic Detail</h3>
+            <p>$100</p>
+        </div>
+        <div class="service">
+            <h3>Premium Detail</h3>
+            <p>$150</p>
+        </div>
+        <div class="service">
+            <h3>Exterior Only</h3>
+            <p>$25</p>
+        </div>
+        <div class="service">
+            <h3>Interior Only</h3>
+            <p>$50</p>
+        </div>
+    </div>
+    <a class="order-btn" href="mailto:nael.zaffar@icloud.com?subject=Car%20Detailing%20Order">Order Now</a>
+</section>
+
+<section class="section" id="reviews">
+    <h2>Customer Reviews</h2>
+    <div class="reviews">
+        <div class="review">
+            <p>"My car looks brand new! Highly recommend Autumn Auto Detailing."</p>
+            <span>- Sarah W.</span>
+        </div>
+        <div class="review">
+            <p>"Amazing service and attention to detail. Will come back again!"</p>
+            <span>- James L.</span>
+        </div>
+        <div class="review">
+            <p>"Fast, professional, and affordable. My interior has never been cleaner."</p>
+            <span>- Priya K.</span>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="contact">
+    <h2>Contact Us</h2>
+    <div class="contact">
+        <p>Email: nael.zaffar@icloud.com</p>
+        <p>Phone: (780) 680-0206</p>
+    </div>
+</section>
+
+<footer>
+    &copy; 2025 Autumn Auto Detailing
+</footer>
+
+<script>
+    // Slider functionality
+    let currentIndex = 0;
+    const slides = document.querySelector('.slides');
+    const totalSlides = slides.children.length;
+
+    function showSlide(index) {
+        if (index < 0) index = totalSlides - 1;
+        if (index >= totalSlides) index = 0;
+        slides.style.transform = 'translateX(' + (-index * 100) + '%)';
+        currentIndex = index;
+    }
+
+    function nextSlide() { showSlide(currentIndex + 1); }
+    function prevSlide() { showSlide(currentIndex - 1); }
+</script>
+
+</body>
+</html>
